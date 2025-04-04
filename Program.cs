@@ -22,7 +22,7 @@ var summaries = new[]
 };
 
 app.MapGet("/weatherforecast",
-[ProducesResponseType<IEnumerable<WeatherForecast>>(StatusCodes.Status200OK, Description = "The service is healthy.")]
+[ProducesResponseType<IEnumerable<WeatherForecast>>(StatusCodes.Status200OK, Description = "The weather forecast for the next 5 days.")]
 () =>
 {
     var forecast =  Enumerable.Range(1, 5).Select(index =>
